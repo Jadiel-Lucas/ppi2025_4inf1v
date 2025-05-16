@@ -1,0 +1,43 @@
+:root {
+    --primary: #b49082ff;
+    --secondary: #d6c3c9ff;
+    --primary-contrast: #a37c40ff;
+    --primary-dark: #07090fff;
+    --secondary-dark: #98473eff;
+}
+
+/* Paleta 1: Azul */
+:root[data-theme="blue"] {
+    --primary: #3a6ea5;
+    --secondary: #b2c9e2;
+    --primary-contrast: #ffffff;
+    --primary-dark: #25415c;
+    --secondary-dark: #7a9bbd;
+}
+
+/* Paleta 2: Verde */
+:root[data-theme="green"] {
+    --primary: #4caf50;
+    --secondary: #c8e6c9;
+    --primary-contrast: #ffffff;
+    --primary-dark: #087f23;
+    --secondary-dark: #388e3c;
+}
+
+/* Paleta 3: Roxo */
+:root[data-theme="purple"] {
+    --primary: #7c3aed;
+    --secondary: #e9d5ff;
+    --primary-contrast: #ffffff;
+    --primary-dark: #4c1d95;
+    --secondary-dark: #a78bfa;
+}
+
+/* Paleta 4: Laranja */
+:root[data-theme="orange"] {
+    --primary: #ff9800;
+    --secondary: #ffe0b2;
+    --primary-contrast: #ffffff;
+    --primary-dark: #e65100;
+    --secondary-dark: #ffb74d;
+}
