@@ -1,7 +1,7 @@
 :root {
     --primary: #b49082ff;
     --secondary: #d6c3c9ff;
-    --primary-contrast: #a37c40ff;
+    --primary-contrast: #ffffff;
     --primary-dark: #07090fff;
     --secondary-dark: #98473eff;
 }
@@ -19,7 +19,7 @@
 :root[data-theme="green"] {
     --primary: #4caf50;
     --secondary: #c8e6c9;
-    --primary-contrast: #ffffff;
+    --primary-contrast: #a37c40ff;
     --primary-dark: #087f23;
     --secondary-dark: #388e3c;
 }
@@ -41,3 +41,4 @@
     --primary-dark: #e65100;
     --secondary-dark: #ffb74d;
 }
+
