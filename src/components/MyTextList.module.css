@@ -2,8 +2,8 @@
     height: 100vh;
     padding: 3rem;
     display: flex;
-    flex-direction: column; /* row column eow_reverse column_reverse */
-    flex-wrap: wrap-reverse; /* nowrap wrap wrap-reverse */
+    flex-direction: row; /* row column eow_reverse column_reverse */
+    flex-wrap: wrap; /* nowrap wrap wrap-reverse */
     gap: 3rem; /* space between items */
 
     /*Eixo horizontal - main axis*/
@@ -12,4 +12,26 @@
     /*Eixo vertical - cross axis*/
     align-items: center; /* flex-start flex-end center baseline stretch */
     align-content: center; /* flex-start flex-end center space-between space-around stretch */
+
+    @media (max-width: 768px) {
+        flex-flow: column nowrap;
+        
+    }
 }
+
+.title {
+    font-size: 10rem;
+    font-weight: bolder;
+    text-align: center;
+
+    @media (max-width: 1200px) {
+        font-size: 6rem;
+
+        @media (max-width: 768px) {
+            font-size: 3rem;
+            
+        }
+    }
+
+}
+

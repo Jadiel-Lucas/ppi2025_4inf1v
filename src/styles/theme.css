@@ -1,4 +1,4 @@
-:root {
+:root[data-theme="blue"] {
     --primary: #b49082ff;
     --secondary: #d6c3c9ff;
     --primary-contrast: #ffffff;
@@ -7,7 +7,7 @@
 }
 
 /* Paleta 1: Azul */
-:root[data-theme="blue"] {
+:root {
     --primary: #3a6ea5;
     --secondary: #b2c9e2;
     --primary-contrast: #ffffff;
