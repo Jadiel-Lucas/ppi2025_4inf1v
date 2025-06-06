@@ -1,5 +1,5 @@
 .container {
-    height: 100vh;
+    /*height: 100vh;*/
     padding: 3rem;
     display: flex;
     flex-direction: row; /* row column eow_reverse column_reverse */
