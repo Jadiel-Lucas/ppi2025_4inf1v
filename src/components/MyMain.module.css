@@ -1,0 +1,46 @@
+.grid {
+    padding: 3rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-rows: repeat(auto-fit, min-content);
+}
+
+.card {
+    height: auto;
+    background-color: var(--primary-light);
+    color: var(--primary-contrast-light);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    
+    grid-template-areas: 
+    "header1"
+    "main"
+    "footer1";
+    
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem auto 10rem;
+}
+
+.header1 {
+    grid-area: header1;
+    background-color: rgb(11, 11, 99);
+}
+
+.footer1 {
+    grid-area: footer1;
+    background-color: white;
+}
+
+.main {
+    grid-area: main;
+    background-color: lightblue;
+}
