@@ -1,8 +1,10 @@
 import "./styles/theme.css";
 import "./styles/global.css";
 {/*import { MyGrid } from "./components/MyGrid";*/}
+import { MyHeader } from "./components/MyHeader";
 import { MyMain } from "./components/MyMain";
-import { Atom } from "lucide-react";
+import { MyFooter } from "./components/MyFooter";
+// import { Atom } from "lucide-react";
 
 export default function App() {
   

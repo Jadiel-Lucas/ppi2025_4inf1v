@@ -2,8 +2,13 @@ import styles from './MyHeader.module.css';
 
 export function MyHeader() {
     return (
-        <header className={styles.header}>
-            <h1 className={styles.title}>My Header</h1>
-        </header>
+        <div className={styles.container}>
+            <div className={styles.containerImg}>
+                <Img
+                    src={img}
+                    alt="Foco, Força e Fé"
+                />
+            </div>
+        </div>
     );
 }
