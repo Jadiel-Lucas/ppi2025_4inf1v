@@ -1,14 +1,11 @@
 import styles from './MyHeader.module.css';
+import { AlarmClock } from 'lucide-react';
 
 export function MyHeader() {
     return (
-        <div className={styles.container}>
-            <div className={styles.containerImg}>
-                <Img
-                    src={img}
-                    alt="Foco, Força e Fé"
-                />
-            </div>
-        </div>
+        <header className={styles.header}>
+            <AlarmClock size={72} />
+            <h1>Foco, Força, Fé</h1>
+        </header>
     );
 }

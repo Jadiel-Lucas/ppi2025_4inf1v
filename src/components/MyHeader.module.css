@@ -1,5 +1,39 @@
-.containerImg  img{
-    height: auto;
-    width: 100%;
-    max-width: 20rem;
+.header{
+    grid-area: header;
+    background-color: rgba(15,21,33,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(37,100,234);
+    font-size: 4rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    flex-direction: column;
+  }
 }
+
+.header svg {
+    width: 100px;
+    height: 100px;
+}
+
+/*.header {
+    grid-area: header;
+    background-color: #4a90e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-weight: bolder;
+    color: white;
+    font-size: 5rem;
+    margin-left: 40px;
+}
+
+.header svg {
+    width: 10rem;
+    height: 10rem;
+}*/

@@ -5,18 +5,15 @@ import { MyHeader } from "./components/MyHeader";
 import { MyMain } from "./components/MyMain";
 import { MyFooter } from "./components/MyFooter";
 // import { Atom } from "lucide-react";
+//import { MyTextList } from "./components/MyTextList";
+
 
 export default function App() {
-  
   return (
-    //React Fragment
     <>
-      
-      <MyHeader />
-      <MyMain />
-      <MyFooter />
-      {/*<Atom size={72} />*/}
-      {/*<MyGrid />*/}
+        <MyHeader />
+        <MyMain />
+        <MyFooter />
     </>
   );
 }
