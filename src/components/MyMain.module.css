@@ -11,14 +11,8 @@
 }
 
 .grid { 
-    /*display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-width: 60rem;
-    width: 100%; 
-    margin: 0 auto; */
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 2rem;
     max-width: 1200px;
@@ -26,6 +20,10 @@
     padding: 2rem;
     margin: 0 auto;
     align-items: center;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));    
+    }
 }
 
 .card {
@@ -49,11 +47,11 @@
 
 .card img {
     width: 200px;
-    height: 200px;
-    object-fit: cover;
+    height:  200px;
     border-radius: 1rem;
     margin: 1rem auto;
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+
 }
 
 .card h2 {

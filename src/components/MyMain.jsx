@@ -2,8 +2,8 @@ import styles from './MyMain.module.css';
 
 export function MyMain() {
     return (
-        <main classname={styles.main}>
-            <div classname={styles.grid}>
+        <main className={styles.main}>
+            <div className={styles.grid}>
                 <div className={styles.card}>
                     <img src="https://picsum.photos/200/300?random=1"/>
                     <h2>My Text 0</h2>
@@ -38,26 +38,3 @@ export function MyMain() {
         </main>
     );
 }
-
-
-
-
-{/*const cards = Array.from({ length: 6 }, (_, i) => ({
-    title: `Card ${i}`,
-    content: `Conteúdo do card ${i}`
-}));
-
-export function MyMain() {
-    return (
-        <div className={styles.main}>
-            <div className={styles.grid}>
-                {cards.map((card, idx) => (
-                    <div className={styles.card} key={idx}>
-                        <h2>{card.title}</h2>
-                        <p>{card.content}</p>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-}*/}
