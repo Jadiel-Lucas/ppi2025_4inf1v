@@ -1,5 +1,5 @@
 import styles from './MyFooter.module.css';
-import { Github, Instagram, Message } from 'lucide-react';
+import { Github, Instagram, Phone } from 'lucide-react';
 
 export function MyFooter() {
     return (
@@ -17,7 +17,7 @@ export function MyFooter() {
                 <a href="https://www.instagram.com/" target="_blank">
                 <Instagram />
                 </a>
-                <Message />
+                <Phone />
             </div>
         </footer>
     );

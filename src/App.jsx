@@ -4,8 +4,8 @@ import "./styles/global.css";
 import { MyHeader } from "./components/MyHeader";
 import { MyMain } from "./components/MyMain";
 import { MyFooter } from "./components/MyFooter";
-// import { Atom } from "lucide-react";
-//import { MyTextList } from "./components/MyTextList";
+import { MyTextList } from "./components/MyTextList";
+import { MyText } from "./components/MyText";
 
 
 export default function App() {
