@@ -3,10 +3,19 @@ import styles from './LuckyNumber.module.css';
 
 export function LuckyNumber() {
     const [luckyNumber, setLuckyNumber] = useState(0);
+    const [array, setArray] = useState([]);
+    const [message, setMessage] = useState('');
 
     function handleClick() {
-        setLuckyNumber(Math.ceil(Math.random() * 31));
-        //console.log(`Lucky number is now: ${luckyNumber}`);
+        var n = Math.ceil(Math.random() * 31);
+        setLuckyNumber(n);
+
+        if (array.includes(n)) {
+            setMessage(`The number ${n} is already picked`);
+        } else {
+            setMessage('');
+            setArray([...array, n]);
+        }
     }
 
     return (
@@ -14,12 +23,30 @@ export function LuckyNumber() {
             { luckyNumber ? (
                 <h1>Lucky Number = {luckyNumber}</h1>
             ) : (
-                <h1>Lucky Number</h1>
+                <h1>Lucky Number 🎲</h1>
             )}
-            <button className={styles.button} onClick={handleClick}>
+            <div className={styles.buttons}>
+                <button className={styles.button} onClick={handleClick}>
                 i'm feeling lucky today!
             </button>
-            {}
+            <button className={styles.button} onClick={() => {
+                setLuckyNumber(0);
+                setArray([]);
+                setMessage('');
+            }}>
+                reset 🔄
+            </button>
+            </div>
+            
+            {message && <p style={{ color: 'red' }}>{message}</p>}
+            {array.length > 0 && (
+                <div>
+                    <h3>Lucky Numbers Array:</h3>
+                    <p>[{array.toString()}]</p>
+                </div>
+            )}
         </div>
     );
 }
+
+
