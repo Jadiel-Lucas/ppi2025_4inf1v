@@ -32,7 +32,7 @@ export function LuckyNumber() {
             <button className={styles.button} onClick={() => {
                 setLuckyNumber(0);
                 setArray([]);
-                setMessage('');
+                setMessage("");
             }}>
                 reset 🔄
             </button>
