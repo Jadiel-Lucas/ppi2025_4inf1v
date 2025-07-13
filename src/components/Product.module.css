@@ -1,0 +1,42 @@
+.productCard {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productTitle {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: black;
+}
+
+.productPrice {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: black;
+}
+
+.productDescription {
+    font-size: 1.3rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.addToCartButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.addToCartButton:hover {
+    background-color: #0056b3;
+}

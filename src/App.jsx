@@ -6,9 +6,8 @@ import { MyHeader } from "./components/MyHeader";
 import { MyMain } from "./components/MyMain";
 import { MyFooter } from "./components/MyFooter";
 import { MyTextList } from "./components/MyTextList";
-import { MyText } from "./components/MyText";
+import { MyText } from "./components/MyText";*/}
 {/*import { LuckyNumber } from "./components/LuckyNumber";*/}
-import { ProductList } from "./components/ProductList";
 
 
 export default function App() {
