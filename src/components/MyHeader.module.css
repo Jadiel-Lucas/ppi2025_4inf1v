@@ -32,23 +32,3 @@
     text-decoration: none;
     color: var(--primary);
 }
-
-/*.header {
-    grid-area: header;
-    background-color: #4a90e2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header h1 {
-    font-weight: bolder;
-    color: white;
-    font-size: 5rem;
-    margin-left: 40px;
-}
-
-.header svg {
-    width: 10rem;
-    height: 10rem;
-}*/
