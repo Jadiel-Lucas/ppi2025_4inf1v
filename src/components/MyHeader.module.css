@@ -1,21 +1,36 @@
-.header{
-    grid-area: header;
-    background-color: rgba(15,21,33,255);
+.container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: rgb(37,100,234);
-    font-size: 4rem;
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-    flex-direction: column;
-  }
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 5rem;
+    background-color: rgb(218, 202, 116);
 }
 
-.header svg {
-    width: 100px;
-    height: 100px;
+.container h1 {
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.containerImg img {
+    height: auto;
+    width: 100%;
+    max-width: 20rem;
+}
+
+.cartInfo {
+    border-radius: 3rem;
+    background-color: var(--primary-light);
+    color: var(--primary-contrast-dark);
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--primary);
 }
 
 /*.header {

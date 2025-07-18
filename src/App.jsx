@@ -1,19 +1,27 @@
 import "./styles/theme.css";
 import "./styles/global.css";
 import { ProductList } from "./components/ProductList";
-{/*import { MyGrid } from "./components/MyGrid";
 import { MyHeader } from "./components/MyHeader";
-import { MyMain } from "./components/MyMain";
-import { MyFooter } from "./components/MyFooter";
-import { MyTextList } from "./components/MyTextList";
-import { MyText } from "./components/MyText";*/}
-{/*import { LuckyNumber } from "./components/LuckyNumber";*/}
+import { useState } from "react";
+import { Route, Routes } from "react-router";
+import { Cart } from "./components/Cart";
 
 
 export default function App() {
+
+  const [cart, setCart] = useState([]);
+
+  function addToCart(product) {
+    setCart((prevCart) => [...prevCart, product]);
+  }
+
   return (
     <>
-        <ProductList/>
+        <MyHeader cart={cart} />
+        <Routes>
+            <Route path="/" element={<ProductList addToCart={addToCart} />} />
+            <Route path="/cart" element={<Cart cart={cart} />} />
+        </Routes>
     </>
   );
 }
