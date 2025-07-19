@@ -20,9 +20,10 @@ export function MyHeader({ cart }) {
                     <p>
                         Total: ${" "}
                         {cart
-                            .reduce((total, product) => total + product.price, 0)
+                            .reduce((total, product) => total + product.price * product.quantity, 0)
                             .toFixed(2)}
                     </p>
+
                 </div>
             </Link>
         </div>
