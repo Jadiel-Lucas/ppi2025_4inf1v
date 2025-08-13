@@ -75,6 +75,6 @@ export function CartProvider({ children }) {
     };
 
     return (
-        <CartContext.Provider value={context}></CartContext.Provider>
+        <CartContext.Provider value={context}>{children}</CartContext.Provider>
     )
 }
