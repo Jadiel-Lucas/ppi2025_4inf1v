@@ -13,16 +13,17 @@ export default function App() {
 
   return (
     <>
-      {/*<CartProvider>
+      <CartProvider>
         <MyHeader />
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastrar" element={<Cadastrar />} />
+          <Route path="/adm" element={<Adm />} />
         </Routes>
       </CartProvider>
-      <Login />
-      <Cadastrar />*/}
-      <Adm />
+
 
     </>
   );

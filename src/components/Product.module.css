@@ -17,16 +17,19 @@
   font-size: 3rem;
   font-weight: bold;
   margin: 0.5rem 0;
+  color: white;
 }
 
 .productDescription {
   font-size: 2rem;
+  color: white;
 }
 
 .productPrice {
   font-size: 2rem;
   font-weight: bold;
   margin: 2rem 0;
+  color: white;
 }
 
 .productButton {

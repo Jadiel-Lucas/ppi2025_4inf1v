@@ -3,6 +3,7 @@
   margin: 3rem auto;
   padding: 2rem;
   background: #ffffff;
+  margin-top: 20rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
@@ -73,3 +74,4 @@ a {
 a:hover {
   text-decoration: underline;
 }
+

@@ -64,3 +64,21 @@
   font-weight: bold;
   z-index: 1;
 }
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.authLink {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(236, 236, 138);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.authLink:hover {
+  color: yellow;
+}

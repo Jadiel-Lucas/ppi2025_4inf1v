@@ -65,7 +65,8 @@ export function Adm() {
         {localProducts.map((p) => (
           <li key={p.id}>
             <img src={p.thumbnail} alt={p.title} />
-            <strong>{p.title}</strong> - ${p.price}
+            <strong>{p.title} - ${p.price} </strong>
+            <p>{p.description}</p>
             <button onClick={() => handleUpdate(p.id)}>Editar</button>
             <button onClick={() => handleRemove(p.id)}>Remover</button>
           </li>
