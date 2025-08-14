@@ -5,18 +5,25 @@ import { MyHeader } from "./components/MyHeader";
 import { Route, Routes } from "react-router";
 import { Cart } from "./components/Cart";
 import { CartProvider } from "./service/CartContext";
+import { Login } from "./components/Login";
+import { Cadastrar } from "./components/Cadastrar";
+import { Adm } from "./components/Adm";
 
 export default function App() {
 
   return (
     <>
-      <CartProvider>
+      {/*<CartProvider>
         <MyHeader />
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </CartProvider>
+      <Login />
+      <Cadastrar />*/}
+      <Adm />
+
     </>
   );
 }
