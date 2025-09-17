@@ -4,7 +4,7 @@ import { ProductList } from "./components/ProductList";
 import { MyHeader } from "./components/MyHeader";
 import { Route, Routes } from "react-router";
 import { Cart } from "./components/Cart";
-import { CartProvider } from "./service/CartContext";
+import { CartProvider } from "./context/CartContext";
 import { Login } from "./components/Login";
 import { Cadastrar } from "./components/Cadastrar";
 import { Adm } from "./components/Adm";
