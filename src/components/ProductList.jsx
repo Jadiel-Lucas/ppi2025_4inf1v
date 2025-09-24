@@ -62,7 +62,7 @@ export function ProductList() {
           <p>Loading products...</p>
         </div>
       )}
-      {error && <p>Error loading products: {error} ❌</p>}
+      {error && <p>❌ {error}</p>}
     </div>
   );
 }

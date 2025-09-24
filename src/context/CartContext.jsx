@@ -11,13 +11,17 @@ export const CartContext = createContext({
     updateQtyCart: () => {},
     removeFromCart: () => {},
     clearCart: () => {},
+
+    session: null,
+    sessionLoading: false,
+    sessionMessage: null,
+    sessionError: null,
+    handleSignUp: () => {},
+    handleSignIn: () => {},
+    handleSignOut: () => {},
 });
 
 export function CartProvider({ children }) {
-    var category = "smartphones";
-    var limit = 10;
-    var apiUrl = `https://dummyjson.com/products/category/${category}?limit=${limit}&select=id,thumbnail,title,price,description`;
-
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -77,6 +81,86 @@ export function CartProvider({ children }) {
         setCart([]);
     }
 
+    //User Session Management
+    const [session, setSession] = useState(null);
+    const [sessionLoading, setSessionLoading] = useState(false);
+    const [sessionMessage, setSessionMessage] = useState(null);
+    const [sessionError, setSessionError] = useState(null);
+
+    async function handleSignUp(email, password, username) {
+        setSessionLoading(true);
+        setSessionMessage(null);
+        setSessionError(null);
+        
+        try {
+            const {data, error} = await supabase.auth.signUp({
+                email,
+                password,
+                options: {
+                    data: {
+                        username: username,
+                        admin: false,
+                    },
+                    emailRedirectTo: `${window.location.origin}/signin`,
+                },
+            });
+
+            if (error) throw error;
+
+            if (data.user) {
+                setSessionMessage("Cadastro realizado! Verifique seu email para confirmar sua conta.");
+            };
+            window.location.href = "/signin";
+
+        } catch (error) {
+            setSessionError(error.message);
+        } finally {
+            setSessionLoading(false);
+        }
+    }
+
+    async function handleSignIn(email, password) {
+        setSessionLoading(true);
+        setSessionMessage(null);
+        setSessionError(null);
+        
+        try {
+            const {data, error} = await supabase.auth.signIn({
+                email,
+                password
+            });
+
+            if (error) throw error;
+
+            if (data.session) {
+                setSession(data.session);
+                setSessionMessage("Login realizado com sucesso!");
+            }
+
+        } catch (error) {
+            setSessionError(error.message);
+        } finally {
+            setSessionLoading(false);
+        }
+    }
+
+    async function handleSignOut() {
+        setSessionLoading(true);
+        setSessionMessage(null);
+        setSessionError(null);
+        
+        try {
+            const { error } = await supabase.auth.signOut();
+            if (error) throw error;
+            setSession(null);
+            window.location.href = "/";
+        } catch (error) {
+            setSessionError(error.message);
+        } finally {
+            setSessionLoading(false);
+        }
+    }
+
     const context = {
         products: products,
         loading: loading,
@@ -86,6 +170,14 @@ export function CartProvider({ children }) {
         updateQtyCart: updateQtyCart,
         removeFromCart: removeFromCart,
         clearCart: clearCart,
+
+        session: session,
+        sessionLoading: sessionLoading,
+        sessionMessage: sessionMessage,
+        sessionError: sessionError,
+        handleSignUp: handleSignUp,
+        handleSignIn: handleSignIn,
+        handleSignOut: handleSignOut,
     };
 
     return (
