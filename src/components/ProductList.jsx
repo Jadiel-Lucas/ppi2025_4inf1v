@@ -1,7 +1,7 @@
 import styles from "./ProductList.module.css";
-import { useState, useContext, useEffect, useRef } from "react";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress } from "@mui/material"; 
 import { Product } from "./Product";
+import { useState, useContext, useEffect, useRef } from "react";
 import { CartContext } from "../context/CartContext"
 
 export function ProductList() {
